@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Progress Circle</title>
+  <script type="module" src="./src/app.js"></script>
+  <link rel="stylesheet" href="./src/styles/progressCircle.css">
+  <link rel="stylesheet" href="./src/styles/style.css">
+
+</head>
+<body>
+  <main class="main-container">
+    <h4 class="title">Progress</h4>
+    <div class="progress-container">
+      <div id="progress">
+        <div class="progress-circle"></div>
+      </div>
+      <div class="controls-container">
+        <div class="controls-element">
+          <input type="number" id="value" min="0" max="100" value="0" pattern="()">
+          <label for="value">Value</label>
+        </div>
+        <div class="controls-element">
+          <label class="toggle">
+            <input type="checkbox" class="toggle__input" id="animate"/>
+            <span class="toggle__slider"></span>
+          </label>
+          <label for="animate">Animate</label>
+        </div>
+        <div class="controls-element">
+          <label class="toggle">
+            <input type="checkbox" class="toggle__input" id="hide"/>
+            <span class="toggle__slider"></span>
+          </label>
+          <label for="hide">Hide</label>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

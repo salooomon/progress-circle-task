@@ -1,0 +1,130 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+* {
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    width: 35.5rem;
+    height: 20rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    margin-top: 0.13rem;
+}
+
+.progress-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: auto;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/*Style control*/
+
+.controls-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.controls-element {
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+}
+
+#value {
+    width: 3.5rem;
+    height: 2.25rem;
+    border: 1px solid #000000;
+    border-radius: 2rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.toggle {
+    width: 3.5rem;
+    height: 2.25rem;
+    border-radius: 2rem;
+    display: inline-block;
+    position: relative;
+}
+
+.toggle__input {
+    opacity: 0;
+}
+.toggle__input:focus + .toggle__slider {
+    box-shadow: 0 0 0.1rem #005CFF;
+}
+
+.toggle__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+
+    background-color: #EAF0F6;
+}
+
+.toggle__slider::before {
+    content: "";
+    position: absolute;
+    cursor: pointer;
+    width: 1.9rem;
+    aspect-ratio: 1;
+    left: 0.15rem;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+    transition: transform 0.2s ease;
+}
+
+.toggle__input:checked + .toggle__slider {
+    background-color: #005CFF;
+}
+
+.toggle__input:checked + .toggle__slider::before {
+    transform: translateX(1.25rem);
+    -webkit-transform: translateX(1.25rem);
+    -ms-transform: translateX(1.25rem);
+}
