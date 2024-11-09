@@ -13,7 +13,6 @@ numberInput.addEventListener("input", (e) => {
 const animateCheckbox = document.getElementById('animate');
 
 animateCheckbox.addEventListener("click", (e) => {
-    console.log(e.target.checked);
     if (e.target.checked) {
         progressCircle.style.animation = '1.5s rotate linear infinite';
     } else {
